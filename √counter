@@ -1,23 +1,20 @@
 #!/usr/bin/env perl6
 # √counter *
+#TODO \n takes longer for some reason
 ; use v6.c
 ; no strict
 ; no worries
 ; no fatal
-; @*ARGS
-. elems or die "err: want information but need addresses\nfix: use `√counter *`"
-; @t = <bytes chars words lines files>
-; @t
-. fmt('%s',"\t")
-. uc
-. say
-; @t
-. map({S:g/./\-/})
-. fmt('%s',"\t")
-. say
-; @*ARGS
-. map(*.IO)
-. grep(*~~:f&:r)
-. map({[.slurp.chars,.words.join.chars,.words.elems,.lines.elems,.relative].fmt('%s',"\t")})
-. fmt('%s',"\n")
-. say
+; @*ARGS.elems or die "err: want information but need addresses\nfix: use `√counter *`"
+; @titles = <bytes chars words lines files>
+; @stats = @*ARGS.map(*.IO).grep(*~~:f&:r).map({[.slurp.chars,.words.join.chars,.words.elems,.lines.elems,.relative]})
+; $fmt = reduce({[#TODO improve this to arbitrary dimensions
+   ($^a[0] < $^b[0] ?? $^b[0] !! $^a[0])
+   ,($^a[1] < $^b[1] ?? $^b[1] !! $^a[1])
+   ,($^a[2] < $^b[2] ?? $^b[2] !! $^a[2])
+   ,($^a[3] < $^b[3] ?? $^b[3] !! $^a[3])
+   ,($^a[4] < $^b[4] ?? $^b[4] !! $^a[4])
+]},@titles.map(*.chars), |@stats.map({.map(*.chars)})).map('%-'~ * ~'s').join(' ')
+; $fmt.sprintf(@titles).uc.say
+; $fmt.sprintf(@titles.map({S:g/. /-/})).say
+; @stats.map({$fmt.sprintf(|$_).say})
