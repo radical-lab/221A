@@ -1,5 +1,6 @@
 #!/usr/bin/env perl6
 # √counter *
+#TODO "\n" takes longer for some reason
 ; use v6.c
 ; no strict
 ; no worries
