@@ -2,7 +2,7 @@
 √ radical tab
 
 ## installation
-`cat<<<'export PATH="$PATH:~/221A"'>>~/.bash_profile`
+`cat<<<'export PATH="$PATH:~/221A"'>>~/.profile`
 
 ## usage
 `⎈⇧u221a␣⭾`
