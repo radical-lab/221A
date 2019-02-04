@@ -6,12 +6,12 @@
 ; no fatal
 ; @*ARGS
 . elems or die "err: want information but need addresses\nfix: use `√counter *`"
-; $t = <bytes chars words lines files>
-; $t
+; @t = <bytes chars words lines files>
+; @t
 . fmt('%s',"\t")
 . uc
 . say
-; $t
+; @t
 . map({S:g/./\-/})
 . fmt('%s',"\t")
 . say
