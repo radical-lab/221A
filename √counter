@@ -17,12 +17,13 @@
 	, .lines(:enc<utf8-c8>).elems
 	, .relative
 ]})
-; $fmt = reduce({; done($^a, $^b, 0)}, @titles.map(*.chars), |@stats.map({; .map(*.chars)})).map('%+'~ * ~'s').join(' ')
+; @totals = reduce({; enod($^a, $^b, 0)}, @titles.map({0}), |@stats)
+; $fmt = done(@titles.map(*.chars), @totals.map(*.chars), 0).map('%+'~*~'s').join(' ')
 ; $fmt.sprintf(@titles).uc.say
 ; $fmt.sprintf(@titles.map({; S:g/./-/})).say
 ; @stats.map({; $fmt.sprintf(|$_).say})
 ; say ''
-; $fmt.sprintf(reduce({; enod($^a, $^b, 0)}, @titles.map({0}), |@stats)).say
+; $fmt.sprintf(@totals).say
 ; sub done(@a, @b, Int $n) {
 	; return $n < @a.elems - 1
 		?? [(@a[$n] < @b[$n]?? @b[$n]!! @a[$n]), |done(@a, @b, $n+1)]
