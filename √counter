@@ -8,14 +8,21 @@
 ; @*ARGS.elems or die "err: want information but need addresses\nfix: use `√counter *`"
 ; @ls = @*ARGS.map(*.IO).grep(*~~:f&:r)
 ; @ls.elems or die "err: want files and need files\nfix: touch a file\nfix: goto another directory"
-; @titles = <bytes chars words lines files>
-; @stats = @ls.map({; [.slurp(:enc<utf8-c8>).chars,.words(:enc<utf8-c8>).join.chars,.words(:enc<utf8-c8>).elems,.lines(:enc<utf8-c8>).elems,.relative]})
-; $fmt = reduce({; done($^a,$^b,0)},@titles.map(*.chars),|@stats.map({; .map(*.chars)})).map('%+'~ * ~'s').join(' ')
+; @titles = <bytes codes chars words lines files>
+; @stats = @ls.map({; [
+	.slurp(:enc<utf8-c8>).encode('utf8-c8').bytes
+	, .slurp(:enc<utf8-c8>).chars
+	, .words(:enc<utf8-c8>).join.chars
+	, .words(:enc<utf8-c8>).elems
+	, .lines(:enc<utf8-c8>).elems
+	, .relative
+]})
+; $fmt = reduce({; done($^a, $^b, 0)}, @titles.map(*.chars), |@stats.map({; .map(*.chars)})).map('%+'~ * ~'s').join(' ')
 ; $fmt.sprintf(@titles).uc.say
 ; $fmt.sprintf(@titles.map({; S:g/./-/})).say
 ; @stats.map({; $fmt.sprintf(|$_).say})
-; sub done(@a,@b,$n) {
+; sub done(@a, @b, $n) {
 	; return $n < @a.elems - 1
-		?? [(@a[$n] < @b[$n]?? @b[$n]!! @a[$n]), |done(@a,@b,$n+1)]
+		?? [(@a[$n] < @b[$n]?? @b[$n]!! @a[$n]), |done(@a, @b, $n+1)]
 		!! [0]
 }
