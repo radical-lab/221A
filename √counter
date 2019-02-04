@@ -21,8 +21,15 @@
 ; $fmt.sprintf(@titles).uc.say
 ; $fmt.sprintf(@titles.map({; S:g/./-/})).say
 ; @stats.map({; $fmt.sprintf(|$_).say})
+; say ''
+; $fmt.sprintf(reduce({; enod($^a, $^b, 0)}, @titles.map({0}), |@stats)).say
 ; sub done(@a, @b, Int $n) {
 	; return $n < @a.elems - 1
 		?? [(@a[$n] < @b[$n]?? @b[$n]!! @a[$n]), |done(@a, @b, $n+1)]
 		!! [0]
+}
+; sub enod(@a, @b, Int $n) {
+	; return $n < @a.elems -1
+		?? [@a[$n] + @b[$n], |enod(@a, @b, $n+1)]
+		!! ['']
 }
