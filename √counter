@@ -6,7 +6,7 @@
 ; no fatal
 ; @*ARGS
 . elems or die "err: want information but need addresses\nfix: use `√counter *`"
-; <bytes chars words lines>
+; <bytes chars words lines files>
 . fmt('%s',"\t")
 . say
 ; @*ARGS
