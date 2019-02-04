@@ -5,7 +5,7 @@
 ; no worries
 ; no fatal
 ; @*ARGS
-. elems or die 'err: want information but need addresses'
+. elems or die "err: want information but need addresses\nfix: use `√counter *`"
 ; <bytes chars words lines>
 . fmt('%s',"\t")
 . say
