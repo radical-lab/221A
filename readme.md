@@ -5,6 +5,9 @@
 `⎈⇧u221a␣⭾`
 <br>`⇧⎈u221a␣⭾`
 
+## update
+`cd $HOME/221A;git pull --all`
+
 ## installation
 `cd ~;git clone https://github.com/radical-lab/221A.git;cat<<<'export PATH="$PATH:$HOME/221A"'>>~/.profile`
 
