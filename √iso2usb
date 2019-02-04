@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 # sudo √iso2usb distro.iso /dev/sdX
 
 # tab complete
