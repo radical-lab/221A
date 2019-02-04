@@ -12,7 +12,6 @@
 ; @*ARGS
 . map(*.IO)
 . grep(*~~:f&:r)
-. map({[.slurp.chars,.words.join.chars,.words.elems,.lines.elems,.relative]})
-. map(*.fmt('%s',"\t"))
+. map({[.slurp.chars,.words.join.chars,.words.elems,.lines.elems,.relative].fmt('%s',"\t")})
 . fmt('%s',"\n")
 . say
