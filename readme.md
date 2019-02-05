@@ -18,7 +18,7 @@
 ### √goto
 * catastrophic failure
 
-### √map and √mapflat
+### √map and √apply
 * singly and doubly quoted text
 * asterix and tilde
 * singly and doubly dots
