@@ -5,4 +5,4 @@
 ; no worries
 ; no fatal
 ; $command = @*ARGS.shift
-; @*ARGS.shift.IO.lines.map({; run $command, $_.words})
+; @*ARGS.shift.IO.lines.map({; shell [$command, |$_.words].join(' ')})

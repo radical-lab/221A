@@ -15,10 +15,8 @@
 
 ## known bugs
 
-### √goto
+### `√goto`
 * catastrophic failure
 
-### √map and √apply
-* singly and doubly quoted text
-* asterix and tilde
-* singly and doubly dots
+### `√map` and `√apply` generalise `wc --files0-from=$F` and adheres to the dotadiw principle making `wc` seem `/(.|g)?nu/`
+* ansi escaped syntax highlighting

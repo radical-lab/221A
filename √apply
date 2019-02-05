@@ -4,4 +4,4 @@
 ; no strict
 ; no worries
 ; no fatal
-; run @*ARGS.shift, @*ARGS.shift.IO.lines.words
+; shell [@*ARGS.shift, |@*ARGS.shift.IO.lines.words].join(' ')
