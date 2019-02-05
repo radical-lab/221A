@@ -19,4 +19,4 @@
 * catastrophic failure
 
 ### `√map` and `√apply` generalise `wc --files0-from=$F` and adheres to the dotadiw principle making `wc` seem `/(.|g)?nu/`
-* ansi escaped syntax highlighting
+* ansi escaped syntax formatting
