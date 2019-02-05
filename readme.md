@@ -17,6 +17,7 @@
 
 ### `√goto`
 * catastrophic failure
+	* fix: `. √goto $address`
 
 ### `√map` and `√apply` generalise `wc --files0-from=$F` and adheres to the [dotadiw](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well) principle making `wc` seem `/(.|g)?nu/`
 * ansi escaped syntax formatting
