@@ -1,5 +1,5 @@
 #!/usr/bin/env perl6
-# √mapflat command file_of_inputs
+# √apply command file_of_inputs
 ; use v6.c
 ; no strict
 ; no worries
