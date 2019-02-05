@@ -21,3 +21,4 @@
 ### √map and √mapflat
 * singly and doubly quoted text
 * asterix and tilde
+* singly and doubly dots
