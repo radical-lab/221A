@@ -10,7 +10,7 @@ device="/dev/sd$2";
 device="$2";
 
 # kitty >whiskers< nom 🙀🙀 sink!
-cat > "$device" < "$file" && sync;
+√cat > "$device" < "$file" && sync;
 
 # esc(ape)
 exit;
