@@ -1,2 +1,2 @@
-#!/usr/bin/env sh
-√apply firefox cfg/daily_cyberspacial_goto &
+#!/bin/sh
+√apply firefox "`√221a`/cfg/daily_cyberspacial_goto" &
