@@ -1,3 +1,6 @@
+# the most important hourly of them all
+set next alarm # for $hh o'clock # TODO: support `backticks` or $(tring interpolation)
+
 # oiling
 +01 × cups of water + +∞ × drinking
 +01 × cups of water + +∞ × water filter refilling
@@ -14,7 +17,7 @@ stretch = ⌊flooring⌋ to ⌈ceiling⌉ # tippie toe reaching for the light bu
 stretch = air swimming forestroke lhs + air swimming backstroke lhs # swinging arms in concentric circles
 stretch = air swimming forestroke rhs + air swimming backstroke rhs # swinging arms in concentric circles
 stretch = torso twister lhs + torso twister rhs
-stretch = steeplechase flourish # https://en.wikipedia.org/wiki/Coin_manipulation#Coin_walk
+stretch = lhs steeplechase flourish back and forths + rhs steeplechase flourish back and forths # https://en.wikipedia.org/wiki/Coin_manipulation#Coin_walk
 stretch = finger fitness # https://handhealth.com/
 
 # neuroplastic balance + coordination
@@ -24,5 +27,5 @@ stretch = finger fitness # https://handhealth.com/
 # exercise
 +10 × situps
 +10 × pushups
-+10 × face the wall squat
-+10 × face away from the wall squat
++10 × face the wall squats
++10 × face away from the wall squats
