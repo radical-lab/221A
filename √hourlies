@@ -1,0 +1,16 @@
+#!/bin/sh
+
+hex() {
+	if expr "$each" : '^[^#]' 1>/dev/null;
+	then read -p "$(printf "$1" | sed -e 's/#.*//' -e 's/ $//g')" \r;
+	fi;
+};
+
+# got hex? source is dysfunctional #reverse_for_cyrenaics
+#√map hex "`√221a`/cfg/hourly_excogitated_xesturgy"
+
+IFS='
+';
+for each in $(cat "`√221a`/cfg/hourly_excogitated_xesturgy");
+do hex "$each";
+done;
