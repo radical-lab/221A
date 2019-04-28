@@ -1,0 +1,8 @@
+#!/bin/sh
+# one-way function that deduplicates addressable data if it is discovered in a directory
+# usage:
+	# $hack $suber_directory $super_directory
+	# $hack $file            $super_directory
+	# $hack *.extension      $super_directory
+	# $hack *                $super_directory
+[ "./$1" != "$2/$1" ] && [ -d "$2" ] && diff -sr "$1" "$2/$1" && [ $? -eq 0 ] && rm -vfr "$1"
